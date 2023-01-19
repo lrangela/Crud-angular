@@ -1,0 +1,40 @@
+<div class="container">
+
+    <h1>View Post</h1>
+
+
+    <a (click)="onBack()" class="btn btn-primary">Back</a>
+
+    <ng-container *ngIf="postAction$ | async as post" >
+        <div>
+
+            <strong>ID:</strong>
+
+            <p>{{ post.id }}</p>
+
+        </div>
+
+
+
+        <div>
+
+            <strong>Title:</strong>
+
+            <p>{{ post.title }}</p>
+
+        </div>
+
+
+
+        <div>
+
+            <strong>Body:</strong>
+
+            <p>{{ post.body }}</p>
+
+        </div>
+
+    </ng-container>
+
+
+</div>
